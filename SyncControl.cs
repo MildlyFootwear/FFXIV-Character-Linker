@@ -19,7 +19,7 @@ namespace FFXIV_Character_Linker
         List<string> characters = CommonFunctions.GenerateCharacters();
         List<string> LinkOps = new List<string>();
         List<string> UnLinkOps = new List<string>();
-
+        List<string> linkables = new List<string> { "UISAVE.DAT", "HOTBAR.DAT", "KEYBIND.DAT", "ADDON.DAT", "MACRO.DAT", "LOGFLTR.DAT" };
 
         public SyncControl()
         {
@@ -40,7 +40,6 @@ namespace FFXIV_Character_Linker
                     CharacterName.AutoSize = true;
                     tableLayoutPanel1.Controls.Add(CharacterName, 0, row);
 
-                    List<string> linkables = new List<string>{ "UISAVE.DAT", "HOTBAR.DAT","KEYBIND.DAT","ADDON.DAT","MACRO.DAT","LOGFLTR.DAT" };
                     int column = 0;
                     foreach (string linkable in linkables) 
                     {
@@ -130,6 +129,40 @@ namespace FFXIV_Character_Linker
 
         private void button1_Click(object sender, EventArgs e)
         {
+            LinkOps.Clear();
+            UnLinkOps.Clear();
+            foreach (string character in CommonFunctions.GenerateCharacters())
+            {
+                foreach (string linkable in linkables)
+                {
+                    UnLinkOps.Add(Settings.Default.GameDocumentsDirectory + "\\" + character + "\\" + linkable);
+                }
+            }
+
+            Settings.Default.NeedToDeploy = true;
+            Settings.Default.Save();
+
+            File.Delete("LinkOps.txt");
+            File.Delete("UnLinkOps.txt");
+
+            System.IO.File.WriteAllLines("LinkOps.txt", LinkOps);
+            System.IO.File.WriteAllLines("UnLinkOps.txt", UnLinkOps);
+
+            Array Links = System.IO.File.ReadAllLines("LinkOps.txt");
+            Array Unlinks = System.IO.File.ReadAllLines("UnLinkOps.txt");
+
+            Thread.Sleep(100);
+
+            Process proc = new Process();
+            proc.StartInfo.FileName = "FFXIV Character Linker.exe";
+            proc.StartInfo.UseShellExecute = true;
+            proc.StartInfo.Verb = "runas";
+
+            MessageBox.Show("Admin permission will be requested to reset files.");
+
+            proc.Start();
+            proc.WaitForExit();
+
             Settings.Default.Reset();
             Settings.Default.Save();
             Application.Restart();

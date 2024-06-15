@@ -32,17 +32,20 @@ namespace FFXIV_Character_Linker
             }
             static void UnLinkFile(string file1Dir, string file1Name)
             {
-                if (File.Exists(file1Dir + "\\Backup\\" + file1Name))
+                if (CommonFunctions.IsLinked(file1Dir + file1Name))
                 {
-                    File.Delete(file1Dir + file1Name);
-                    File.Move(file1Dir + "\\Backup\\" + file1Name, file1Dir + file1Name);
-                }
-                else
-                {
-                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                    DialogResult result = MessageBox.Show("Could not locate backup for " + file1Name + ", continue removal?", "FFXIV Settings Linker", buttons);
-                    if (result == System.Windows.Forms.DialogResult.Yes)
+                    if (File.Exists(file1Dir + "\\Backup\\" + file1Name))
+                    {
                         File.Delete(file1Dir + file1Name);
+                        File.Move(file1Dir + "\\Backup\\" + file1Name, file1Dir + file1Name);
+                    }
+                    else
+                    {
+                        MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                        DialogResult result = MessageBox.Show("Could not locate backup for " + file1Name + ", continue removal?", "FFXIV Settings Linker", buttons);
+                        if (result == System.Windows.Forms.DialogResult.Yes)
+                            File.Delete(file1Dir + file1Name);
+                    }
                 }
             }
 
