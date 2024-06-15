@@ -26,6 +26,8 @@ namespace FFXIV_Character_Linker
             InitializeComponent();
 
             SelectedSource.Text = "Selected source: " + Settings.Default.SelectedMaster;
+            DirectoryLabel.Text = "Settings directory: " + Settings.Default.GameDocumentsDirectory;
+
             int row = 0;
             string MasterPath = Settings.Default.GameDocumentsDirectory + "\\" + Settings.Default.SelectedMaster + "\\";
             foreach (string str in characters)

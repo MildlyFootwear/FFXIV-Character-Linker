@@ -43,6 +43,7 @@
             CTRL2Label = new Label();
             resetButton = new Button();
             LinkButton = new Button();
+            DirectoryLabel = new Label();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -139,10 +140,16 @@
             LinkButton.UseVisualStyleBackColor = true;
             LinkButton.Click += LinkButton_Click;
             // 
+            // DirectoryLabel
+            // 
+            resources.ApplyResources(DirectoryLabel, "DirectoryLabel");
+            DirectoryLabel.Name = "DirectoryLabel";
+            // 
             // SyncControl
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(DirectoryLabel);
             Controls.Add(LinkButton);
             Controls.Add(resetButton);
             Controls.Add(tableLayoutPanel1);
@@ -173,5 +180,6 @@
         private Label CMNLabel;
         private Label CTRL1Label;
         private Label CTRL2Label;
+        private Label DirectoryLabel;
     }
 }
