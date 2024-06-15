@@ -29,39 +29,44 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            button1 = new Button();
+            SelectSettingsDirectoryButton = new Button();
             folderBrowserDialog1 = new FolderBrowserDialog();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top;
+            label1.Anchor = AnchorStyles.None;
             label1.AutoSize = true;
-            label1.Location = new Point(235, 87);
+            label1.Location = new Point(41, 18);
             label1.Name = "label1";
-            label1.Size = new Size(335, 30);
+            label1.Size = new Size(395, 30);
             label1.TabIndex = 0;
-            label1.Text = "Game settings directory not found.";
+            label1.Text = "Please select the game settings directory.";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label1.Click += label1_Click;
             // 
-            // button1
+            // SelectSettingsDirectoryButton
             // 
-            button1.Location = new Point(271, 220);
-            button1.Name = "button1";
-            button1.Size = new Size(281, 40);
-            button1.TabIndex = 1;
-            button1.Text = "Select Directory";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            SelectSettingsDirectoryButton.Location = new Point(98, 67);
+            SelectSettingsDirectoryButton.Name = "SelectSettingsDirectoryButton";
+            SelectSettingsDirectoryButton.Size = new Size(281, 40);
+            SelectSettingsDirectoryButton.TabIndex = 1;
+            SelectSettingsDirectoryButton.Text = "Select Directory";
+            SelectSettingsDirectoryButton.UseVisualStyleBackColor = true;
+            SelectSettingsDirectoryButton.Click += button1_Click;
             // 
             // GameDocumentDirectorySelection
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button1);
+            ClientSize = new Size(476, 136);
+            Controls.Add(SelectSettingsDirectoryButton);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "GameDocumentDirectorySelection";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FFXIV Settings Linker";
+            Load += GameDocumentDirectorySelection_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -70,7 +75,7 @@
 
 
         private Label label1;
-        private Button button1;
+        private Button SelectSettingsDirectoryButton;
         private FolderBrowserDialog folderBrowserDialog1;
     }
 }

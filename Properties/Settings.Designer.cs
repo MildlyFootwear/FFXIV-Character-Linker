@@ -33,5 +33,41 @@ namespace FFXIV_Character_Linker.Properties {
                 this["GameDocumentsDirectory"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Blank")]
+        public string SelectedMaster {
+            get {
+                return ((string)(this["SelectedMaster"]));
+            }
+            set {
+                this["SelectedMaster"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DeployedMaster {
+            get {
+                return ((string)(this["DeployedMaster"]));
+            }
+            set {
+                this["DeployedMaster"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1, 1")]
+        public global::System.Drawing.Point SyncControlPosition {
+            get {
+                return ((global::System.Drawing.Point)(this["SyncControlPosition"]));
+            }
+            set {
+                this["SyncControlPosition"] = value;
+            }
+        }
     }
 }
