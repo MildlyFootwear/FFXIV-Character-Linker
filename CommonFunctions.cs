@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Security.Principal;
 using System.Text;
@@ -24,33 +25,13 @@ namespace FFXIV_Character_Linker
             }
             return Characters;
         }
-        public static bool IsLinked(string file1, string file2)
+        public static bool IsLinked(string file1)
         {
             
-            if (File.Exists(file1) && File.Exists(file2))
+            if (File.Exists(file1))
             {
-                FileStream f1 = null;
-                FileStream f2 = null;
-                f1 = new FileStream(file1, FileMode.Open, FileAccess.Read);
-                f2 = new FileStream(file2, FileMode.Open, FileAccess.Read);
-                while (true)
-                {
-                    int f1byte = f1.ReadByte();
-                    int f2byte = f2.ReadByte();
-                    if (f1byte != f2byte)
-                    {
-                        f1.Close();
-                        f2.Close();
-                        return false;
-                    }
-                    else if (f1byte == -1 && f2byte == -1)
-                    {
-                        f1.Close();
-                        f2.Close();
-                        return true;
-                    }
-
-                }
+                FileInfo pathInfo = new FileInfo(file1);
+                return pathInfo.Attributes.HasFlag(FileAttributes.ReparsePoint);
             }
             
             return false;

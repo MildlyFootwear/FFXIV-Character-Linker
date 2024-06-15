@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,21 @@ namespace FFXIV_Character_Linker
         public MasterSelect()
         {
             InitializeComponent();
+            int Width = 0;
+            int Height = 0;
+            Button dummy = new Button();
+            flowLayoutPanel1.Controls.Add(dummy);
+            foreach (string character in CommonFunctions.GenerateCharacters())
+            {
+                
+                dummy.Text = character;
+                dummy.AutoSize = true;
+                if (dummy.Width > Width)
+                    Width = dummy.Width;
+                if (dummy.Height > Height)
+                    Height = dummy.Height;
+            }
+            flowLayoutPanel1.Controls.Remove(dummy);
             foreach (string character in CommonFunctions.GenerateCharacters())
             {
 
@@ -26,10 +42,11 @@ namespace FFXIV_Character_Linker
                 }
                 Button button = new Button();
                 button.Text = character;
-                button.Width = 375;
-                button.Height = 40;
+                button.Width = Width;
+                button.Height = Height;
                 button.Click += SelectCharacter;
                 flowLayoutPanel1.Controls.Add(button);
+
             }
         }
         private void label1_Click(object sender, EventArgs e)

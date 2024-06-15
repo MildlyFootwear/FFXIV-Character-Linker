@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SyncControl));
             SelectedSource = new Label();
-            LinkedSourceLabel = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             CharacterList = new Label();
             label1 = new Label();
@@ -49,11 +48,6 @@
             // 
             resources.ApplyResources(SelectedSource, "SelectedSource");
             SelectedSource.Name = "SelectedSource";
-            // 
-            // LinkedSourceLabel
-            // 
-            resources.ApplyResources(LinkedSourceLabel, "LinkedSourceLabel");
-            LinkedSourceLabel.Name = "LinkedSourceLabel";
             // 
             // tableLayoutPanel1
             // 
@@ -123,7 +117,6 @@
             Controls.Add(LinkButton);
             Controls.Add(resetButton);
             Controls.Add(tableLayoutPanel1);
-            Controls.Add(LinkedSourceLabel);
             Controls.Add(SelectedSource);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "SyncControl";
@@ -138,7 +131,6 @@
         #endregion
 
         private Label SelectedSource;
-        private Label LinkedSourceLabel;
         private TableLayoutPanel tableLayoutPanel1;
         private Label CharacterList;
         private Button resetButton;

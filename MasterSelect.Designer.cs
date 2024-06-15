@@ -35,9 +35,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(84, 26);
+            label1.Location = new Point(49, 13);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(374, 30);
+            label1.Size = new Size(209, 15);
             label1.TabIndex = 0;
             label1.Text = "Select a character to use as the source:";
             label1.Click += label1_Click;
@@ -45,19 +46,24 @@
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.Location = new Point(83, 68);
+            flowLayoutPanel1.AutoSize = true;
+            flowLayoutPanel1.BorderStyle = BorderStyle.FixedSingle;
+            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+            flowLayoutPanel1.Location = new Point(48, 34);
+            flowLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(376, 307);
+            flowLayoutPanel1.Size = new Size(219, 154);
             flowLayoutPanel1.TabIndex = 1;
             // 
             // MasterSelect
             // 
-            AutoScaleDimensions = new SizeF(12F, 30F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(543, 450);
+            ClientSize = new Size(317, 225);
             Controls.Add(flowLayoutPanel1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "MasterSelect";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FFXIV Settings Linker";

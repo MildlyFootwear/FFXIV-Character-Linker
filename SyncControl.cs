@@ -26,7 +26,6 @@ namespace FFXIV_Character_Linker
             InitializeComponent();
 
             SelectedSource.Text = "Selected source: " + Settings.Default.SelectedMaster;
-            LinkedSourceLabel.Text = "Linked source: " + Settings.Default.DeployedMaster;
             int row = 0;
             string MasterPath = Settings.Default.GameDocumentsDirectory + "\\" + Settings.Default.SelectedMaster + "\\";
             foreach (string str in characters)
@@ -36,6 +35,7 @@ namespace FFXIV_Character_Linker
                     string ActivePath = Settings.Default.GameDocumentsDirectory + "\\" + str + "\\";
                     row++;
                     Label CharacterName = new Label();
+                    CharacterName.Name = str;
                     CharacterName.Text = str;
                     CharacterName.AutoSize = true;
                     tableLayoutPanel1.Controls.Add(CharacterName, 0, row);
@@ -47,7 +47,9 @@ namespace FFXIV_Character_Linker
                         column++;
                         CheckBox box = new CheckBox();
                         box.Name = linkable;
-                        if (CommonFunctions.IsLinked(ActivePath + linkable,MasterPath+linkable))
+                        box.AutoSize = true;
+                        box.Anchor = AnchorStyles.Top;
+                        if (CommonFunctions.IsLinked(ActivePath + linkable))
                         {
                             box.Checked = true;
                         }
@@ -80,6 +82,9 @@ namespace FFXIV_Character_Linker
         
         private void LinkButton_Click(object sender, EventArgs e)
         {
+
+            Settings.Default.NeedToDeploy = true;
+            Settings.Default.Save();
 
             File.Delete("LinkOps.txt");
             File.Delete("UnLinkOps.txt");
