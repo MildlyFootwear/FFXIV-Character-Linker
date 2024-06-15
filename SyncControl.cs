@@ -178,13 +178,13 @@ namespace FFXIV_Character_Linker
         private void UILabel_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(this.UILabel, "Contains HUD layout.");
+            toolTip.SetToolTip(this.UILabel, "Contains portraits and some other settings.");
         }
 
         private void HotbarLabel_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(this.HotbarLabel, "Contains hotbar settings.");
+            toolTip.SetToolTip(this.HotbarLabel, "Contains hotbar slots.");
         }
 
         private void KeybindLabel_MouseHover(object sender, EventArgs e)
@@ -193,10 +193,10 @@ namespace FFXIV_Character_Linker
             toolTip.SetToolTip(this.KeybindLabel, "Contains keybinds.");
         }
 
-        private void GaugeLabel_MouseHover(object sender, EventArgs e)
+        private void ADDONLabel_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(this.GaugeLabel, "Contains job gauge settings.");
+            toolTip.SetToolTip(this.ADDONLabel, "Contains settings for the window sizes, positions, and other HUD element settings.");
         }
 
         private void MacrosLabel_MouseHover(object sender, EventArgs e)
@@ -214,7 +214,7 @@ namespace FFXIV_Character_Linker
         private void CMNLabel_MouseHover(object sender, EventArgs e)
         {
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(this.CMNLabel, "Contains settings for battle effects, camera settings, and others.");
+            toolTip.SetToolTip(this.CMNLabel, "Contains settings for battle effects, camera settings, keyboard vs gamepad, and others.");
         }
 
         private void CTRL1Label_MouseHover(object sender, EventArgs e)

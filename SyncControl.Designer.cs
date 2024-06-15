@@ -35,7 +35,7 @@
             UILabel = new Label();
             HotbarLabel = new Label();
             KeybindLabel = new Label();
-            GaugeLabel = new Label();
+            ADDONLabel = new Label();
             MacrosLabel = new Label();
             ChatFiltersLabel = new Label();
             CMNLabel = new Label();
@@ -59,7 +59,7 @@
             tableLayoutPanel1.Controls.Add(UILabel, 1, 0);
             tableLayoutPanel1.Controls.Add(HotbarLabel, 2, 0);
             tableLayoutPanel1.Controls.Add(KeybindLabel, 3, 0);
-            tableLayoutPanel1.Controls.Add(GaugeLabel, 4, 0);
+            tableLayoutPanel1.Controls.Add(ADDONLabel, 4, 0);
             tableLayoutPanel1.Controls.Add(MacrosLabel, 5, 0);
             tableLayoutPanel1.Controls.Add(ChatFiltersLabel, 6, 0);
             tableLayoutPanel1.Controls.Add(CMNLabel, 7, 0);
@@ -90,11 +90,11 @@
             KeybindLabel.Name = "KeybindLabel";
             KeybindLabel.MouseHover += KeybindLabel_MouseHover;
             // 
-            // GaugeLabel
+            // ADDONLabel
             // 
-            resources.ApplyResources(GaugeLabel, "GaugeLabel");
-            GaugeLabel.Name = "GaugeLabel";
-            GaugeLabel.MouseHover += GaugeLabel_MouseHover;
+            resources.ApplyResources(ADDONLabel, "ADDONLabel");
+            ADDONLabel.Name = "ADDONLabel";
+            ADDONLabel.MouseHover += ADDONLabel_MouseHover;
             // 
             // MacrosLabel
             // 
@@ -173,7 +173,7 @@
         private Label UILabel;
         private Label HotbarLabel;
         private Label KeybindLabel;
-        private Label GaugeLabel;
+        private Label ADDONLabel;
         private Label MacrosLabel;
         private Label ChatFiltersLabel;
         private Button LinkButton;
