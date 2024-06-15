@@ -161,7 +161,7 @@
     <value>Single</value>
   </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>10</value>
   </data>
   <data name="CharacterList.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -199,203 +199,287 @@
   <data name="&gt;&gt;CharacterList.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="UILabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+  <data name="UILabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="UILabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>223, 1</value>
   </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="UILabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="UILabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>18, 15</value>
   </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="UILabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
+  <data name="UILabel.Text" xml:space="preserve">
     <value>UI</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="&gt;&gt;UILabel.Name" xml:space="preserve">
+    <value>UILabel</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+  <data name="&gt;&gt;UILabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;UILabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;UILabel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="HotbarLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+  <data name="HotbarLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="HotbarLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>246, 1</value>
   </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="HotbarLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="HotbarLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 15</value>
   </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+  <data name="HotbarLabel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
+  <data name="HotbarLabel.Text" xml:space="preserve">
     <value>Hotbar</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="&gt;&gt;HotbarLabel.Name" xml:space="preserve">
+    <value>HotbarLabel</value>
   </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+  <data name="&gt;&gt;HotbarLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;HotbarLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;HotbarLabel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="KeybindLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+  <data name="KeybindLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="KeybindLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>295, 1</value>
   </data>
-  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="KeybindLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="KeybindLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 15</value>
   </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+  <data name="KeybindLabel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
+  <data name="KeybindLabel.Text" xml:space="preserve">
     <value>Keybind</value>
   </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
+  <data name="&gt;&gt;KeybindLabel.Name" xml:space="preserve">
+    <value>KeybindLabel</value>
   </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+  <data name="&gt;&gt;KeybindLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;KeybindLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;KeybindLabel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="GaugeLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+  <data name="GaugeLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="GaugeLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>350, 1</value>
   </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="GaugeLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="GaugeLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>41, 15</value>
   </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+  <data name="GaugeLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="label4.Text" xml:space="preserve">
+  <data name="GaugeLabel.Text" xml:space="preserve">
     <value>Gauge</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="&gt;&gt;GaugeLabel.Name" xml:space="preserve">
+    <value>GaugeLabel</value>
   </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+  <data name="&gt;&gt;GaugeLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;GaugeLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;GaugeLabel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="label5.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="MacrosLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+  <data name="MacrosLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="MacrosLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>396, 1</value>
   </data>
-  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="MacrosLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MacrosLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>46, 15</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+  <data name="MacrosLabel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
+  <data name="MacrosLabel.Text" xml:space="preserve">
     <value>Macros</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
+  <data name="&gt;&gt;MacrosLabel.Name" xml:space="preserve">
+    <value>MacrosLabel</value>
   </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+  <data name="&gt;&gt;MacrosLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;MacrosLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;MacrosLabel.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label6.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="ChatFiltersLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+  <data name="ChatFiltersLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ChatFiltersLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>447, 1</value>
   </data>
-  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="ChatFiltersLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
   </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 15</value>
+  <data name="ChatFiltersLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 15</value>
   </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+  <data name="ChatFiltersLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="label6.Text" xml:space="preserve">
+  <data name="ChatFiltersLabel.Text" xml:space="preserve">
     <value>Chat Filters</value>
   </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
+  <data name="&gt;&gt;ChatFiltersLabel.Name" xml:space="preserve">
+    <value>ChatFiltersLabel</value>
   </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+  <data name="&gt;&gt;ChatFiltersLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ChatFiltersLabel.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ChatFiltersLabel.ZOrder" xml:space="preserve">
     <value>6</value>
+  </data>
+  <data name="CMNLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="CMNLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CMNLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>519, 1</value>
+  </data>
+  <data name="CMNLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 15</value>
+  </data>
+  <data name="CMNLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="CMNLabel.Text" xml:space="preserve">
+    <value>CMN</value>
+  </data>
+  <data name="&gt;&gt;CMNLabel.Name" xml:space="preserve">
+    <value>CMNLabel</value>
+  </data>
+  <data name="&gt;&gt;CMNLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CMNLabel.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;CMNLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="CTRL1Label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CTRL1Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>561, 1</value>
+  </data>
+  <data name="CTRL1Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 15</value>
+  </data>
+  <data name="CTRL1Label.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="CTRL1Label.Text" xml:space="preserve">
+    <value>CTRL0</value>
+  </data>
+  <data name="&gt;&gt;CTRL1Label.Name" xml:space="preserve">
+    <value>CTRL1Label</value>
+  </data>
+  <data name="&gt;&gt;CTRL1Label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CTRL1Label.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;CTRL1Label.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="CTRL2Label.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="CTRL2Label.Location" type="System.Drawing.Point, System.Drawing">
+    <value>608, 1</value>
+  </data>
+  <data name="CTRL2Label.Size" type="System.Drawing.Size, System.Drawing">
+    <value>40, 15</value>
+  </data>
+  <data name="CTRL2Label.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="CTRL2Label.Text" xml:space="preserve">
+    <value>CTRL1</value>
+  </data>
+  <data name="&gt;&gt;CTRL2Label.Name" xml:space="preserve">
+    <value>CTRL2Label</value>
+  </data>
+  <data name="&gt;&gt;CTRL2Label.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;CTRL2Label.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;CTRL2Label.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="tableLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
     <value>7, 69</value>
@@ -407,7 +491,7 @@
     <value>1</value>
   </data>
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>546, 120</value>
+    <value>686, 120</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -425,13 +509,13 @@
     <value>2</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="CharacterList" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label1" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label2" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="label3" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="label4" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="label5" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="label6" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,219,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="CharacterList" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="UILabel" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="HotbarLabel" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="KeybindLabel" Row="0" RowSpan="1" Column="3" ColumnSpan="1" /&gt;&lt;Control Name="GaugeLabel" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;Control Name="MacrosLabel" Row="0" RowSpan="1" Column="5" ColumnSpan="1" /&gt;&lt;Control Name="ChatFiltersLabel" Row="0" RowSpan="1" Column="6" ColumnSpan="1" /&gt;&lt;Control Name="CMNLabel" Row="0" RowSpan="1" Column="7" ColumnSpan="1" /&gt;&lt;Control Name="CTRL1Label" Row="0" RowSpan="1" Column="8" ColumnSpan="1" /&gt;&lt;Control Name="CTRL2Label" Row="0" RowSpan="1" Column="9" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Absolute,219,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0,AutoSize,0" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="resetButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
   <data name="resetButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>472, 10</value>
+    <value>612, 10</value>
   </data>
   <data name="resetButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>6, 5, 6, 5</value>
@@ -467,7 +551,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="LinkButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 24</value>
+    <value>216, 24</value>
   </data>
   <data name="LinkButton.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -494,7 +578,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>560, 237</value>
+    <value>700, 237</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>

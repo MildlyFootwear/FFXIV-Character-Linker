@@ -19,7 +19,7 @@ namespace FFXIV_Character_Linker
         List<string> characters = CommonFunctions.GenerateCharacters();
         List<string> LinkOps = new List<string>();
         List<string> UnLinkOps = new List<string>();
-        List<string> linkables = new List<string> { "UISAVE.DAT", "HOTBAR.DAT", "KEYBIND.DAT", "ADDON.DAT", "MACRO.DAT", "LOGFLTR.DAT" };
+        List<string> linkables = new List<string> { "UISAVE.DAT", "HOTBAR.DAT", "KEYBIND.DAT", "ADDON.DAT", "MACRO.DAT", "LOGFLTR.DAT", "COMMON.DAT", "CONTROL0.DAT", "CONTROL1.DAT" };
 
         public SyncControl()
         {
@@ -41,7 +41,7 @@ namespace FFXIV_Character_Linker
                     tableLayoutPanel1.Controls.Add(CharacterName, 0, row);
 
                     int column = 0;
-                    foreach (string linkable in linkables) 
+                    foreach (string linkable in linkables)
                     {
                         column++;
                         CheckBox box = new CheckBox();
@@ -54,21 +54,26 @@ namespace FFXIV_Character_Linker
                         }
                         void check(object sender, EventArgs e)
                         {
-                            string file = ActivePath + linkable;
-                            if (box.Checked)
+                            if (File.Exists(MasterPath + linkable))
                             {
-                                if (UnLinkOps.Remove(file) == false)
+
+                                string file = ActivePath + linkable;
+                                if (box.Checked)
                                 {
-                                    LinkOps.Add(file);
+                                    if (UnLinkOps.Remove(file) == false)
+                                    {
+                                        LinkOps.Add(file);
+                                    }
+                                }
+                                else
+                                {
+                                    if (LinkOps.Remove(file) == false)
+                                    {
+                                        UnLinkOps.Add(file);
+                                    }
                                 }
                             }
-                            else
-                            {
-                                if (LinkOps.Remove(file) == false)
-                                {
-                                    UnLinkOps.Add(file);
-                                }
-                            }
+                            else { MessageBox.Show("Could not find " + linkable + "for the source character."); box.Checked = false; }
                         }
                         box.Click += check;
                         tableLayoutPanel1.Controls.Add(box, column, row);
@@ -78,7 +83,7 @@ namespace FFXIV_Character_Linker
 
             }
         }
-        
+
         private void LinkButton_Click(object sender, EventArgs e)
         {
 
@@ -166,6 +171,60 @@ namespace FFXIV_Character_Linker
             Settings.Default.Reset();
             Settings.Default.Save();
             Application.Restart();
+        }
+
+        private void UILabel_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(this.UILabel, "Contains HUD layout.");
+        }
+
+        private void HotbarLabel_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(this.HotbarLabel, "Contains hotbar settings.");
+        }
+
+        private void KeybindLabel_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(this.KeybindLabel, "Contains keybinds.");
+        }
+
+        private void GaugeLabel_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(this.GaugeLabel, "Contains job gauge settings.");
+        }
+
+        private void MacrosLabel_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(this.MacrosLabel, "Contains character specific macros.");
+        }
+
+        private void ChatFiltersLabel_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(this.ChatFiltersLabel, "Contains filters for the chat window.");
+        }
+
+        private void CMNLabel_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(this.CMNLabel, "Contains settings for battle effects, camera settings, and others.");
+        }
+
+        private void CTRL1Label_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(this.CTRL1Label, "Contains settings for mouse sensitivity similar control settings.");
+        }
+
+        private void CTRL2Label_MouseHover(object sender, EventArgs e)
+        {
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(this.CTRL2Label, "Contains the same settings as CTRL0.");
         }
     }
 }

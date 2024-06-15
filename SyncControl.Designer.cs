@@ -32,12 +32,15 @@
             SelectedSource = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             CharacterList = new Label();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
+            UILabel = new Label();
+            HotbarLabel = new Label();
+            KeybindLabel = new Label();
+            GaugeLabel = new Label();
+            MacrosLabel = new Label();
+            ChatFiltersLabel = new Label();
+            CMNLabel = new Label();
+            CTRL1Label = new Label();
+            CTRL2Label = new Label();
             resetButton = new Button();
             LinkButton = new Button();
             tableLayoutPanel1.SuspendLayout();
@@ -52,12 +55,15 @@
             // 
             resources.ApplyResources(tableLayoutPanel1, "tableLayoutPanel1");
             tableLayoutPanel1.Controls.Add(CharacterList, 0, 0);
-            tableLayoutPanel1.Controls.Add(label1, 1, 0);
-            tableLayoutPanel1.Controls.Add(label2, 2, 0);
-            tableLayoutPanel1.Controls.Add(label3, 3, 0);
-            tableLayoutPanel1.Controls.Add(label4, 4, 0);
-            tableLayoutPanel1.Controls.Add(label5, 5, 0);
-            tableLayoutPanel1.Controls.Add(label6, 6, 0);
+            tableLayoutPanel1.Controls.Add(UILabel, 1, 0);
+            tableLayoutPanel1.Controls.Add(HotbarLabel, 2, 0);
+            tableLayoutPanel1.Controls.Add(KeybindLabel, 3, 0);
+            tableLayoutPanel1.Controls.Add(GaugeLabel, 4, 0);
+            tableLayoutPanel1.Controls.Add(MacrosLabel, 5, 0);
+            tableLayoutPanel1.Controls.Add(ChatFiltersLabel, 6, 0);
+            tableLayoutPanel1.Controls.Add(CMNLabel, 7, 0);
+            tableLayoutPanel1.Controls.Add(CTRL1Label, 8, 0);
+            tableLayoutPanel1.Controls.Add(CTRL2Label, 9, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // CharacterList
@@ -65,35 +71,59 @@
             resources.ApplyResources(CharacterList, "CharacterList");
             CharacterList.Name = "CharacterList";
             // 
-            // label1
+            // UILabel
             // 
-            resources.ApplyResources(label1, "label1");
-            label1.Name = "label1";
+            resources.ApplyResources(UILabel, "UILabel");
+            UILabel.Name = "UILabel";
+            UILabel.MouseHover += UILabel_MouseHover;
             // 
-            // label2
+            // HotbarLabel
             // 
-            resources.ApplyResources(label2, "label2");
-            label2.Name = "label2";
+            resources.ApplyResources(HotbarLabel, "HotbarLabel");
+            HotbarLabel.Name = "HotbarLabel";
+            HotbarLabel.MouseHover += HotbarLabel_MouseHover;
             // 
-            // label3
+            // KeybindLabel
             // 
-            resources.ApplyResources(label3, "label3");
-            label3.Name = "label3";
+            resources.ApplyResources(KeybindLabel, "KeybindLabel");
+            KeybindLabel.Name = "KeybindLabel";
+            KeybindLabel.MouseHover += KeybindLabel_MouseHover;
             // 
-            // label4
+            // GaugeLabel
             // 
-            resources.ApplyResources(label4, "label4");
-            label4.Name = "label4";
+            resources.ApplyResources(GaugeLabel, "GaugeLabel");
+            GaugeLabel.Name = "GaugeLabel";
+            GaugeLabel.MouseHover += GaugeLabel_MouseHover;
             // 
-            // label5
+            // MacrosLabel
             // 
-            resources.ApplyResources(label5, "label5");
-            label5.Name = "label5";
+            resources.ApplyResources(MacrosLabel, "MacrosLabel");
+            MacrosLabel.Name = "MacrosLabel";
+            MacrosLabel.MouseHover += MacrosLabel_MouseHover;
             // 
-            // label6
+            // ChatFiltersLabel
             // 
-            resources.ApplyResources(label6, "label6");
-            label6.Name = "label6";
+            resources.ApplyResources(ChatFiltersLabel, "ChatFiltersLabel");
+            ChatFiltersLabel.Name = "ChatFiltersLabel";
+            ChatFiltersLabel.MouseHover += ChatFiltersLabel_MouseHover;
+            // 
+            // CMNLabel
+            // 
+            resources.ApplyResources(CMNLabel, "CMNLabel");
+            CMNLabel.Name = "CMNLabel";
+            CMNLabel.MouseHover += CMNLabel_MouseHover;
+            // 
+            // CTRL1Label
+            // 
+            resources.ApplyResources(CTRL1Label, "CTRL1Label");
+            CTRL1Label.Name = "CTRL1Label";
+            CTRL1Label.MouseHover += CTRL1Label_MouseHover;
+            // 
+            // CTRL2Label
+            // 
+            resources.ApplyResources(CTRL2Label, "CTRL2Label");
+            CTRL2Label.Name = "CTRL2Label";
+            CTRL2Label.MouseHover += CTRL2Label_MouseHover;
             // 
             // resetButton
             // 
@@ -133,12 +163,15 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label CharacterList;
         private Button resetButton;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
+        private Label UILabel;
+        private Label HotbarLabel;
+        private Label KeybindLabel;
+        private Label GaugeLabel;
+        private Label MacrosLabel;
+        private Label ChatFiltersLabel;
         private Button LinkButton;
+        private Label CMNLabel;
+        private Label CTRL1Label;
+        private Label CTRL2Label;
     }
 }
