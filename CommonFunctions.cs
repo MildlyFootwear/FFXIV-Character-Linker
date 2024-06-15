@@ -38,6 +38,18 @@ namespace FFXIV_Character_Linker
 
 
         }
+        public static bool ValidMaster(string character)
+        {
+            string characterPath = Settings.Default.GameDocumentsDirectory + "\\" + character + "\\";
+            foreach (string linkable in Variables.linkables)
+            {
+                if (CommonFunctions.IsLinked(characterPath + linkable))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
 
     }
     
