@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FFXIV_Character_Linker.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,9 +37,22 @@ namespace FFXIV_Character_Linker
 
                 void SelectCharacter(object sender, EventArgs e)
                 {
-                    Properties.Settings.Default.SelectedMaster = character;
-                    Properties.Settings.Default.Save();
-                    Application.Restart();
+                    bool LinkedFilesPresent = false;
+                    string characterPath = Settings.Default.GameDocumentsDirectory +"\\"+ character+"\\";
+                    foreach (string linkable in Variables.linkables)
+                    {
+                        if (CommonFunctions.IsLinked(characterPath+linkable))
+                        {
+                            LinkedFilesPresent = true;
+                        }
+                    }
+                    if (LinkedFilesPresent == false) 
+                    {
+                        Properties.Settings.Default.SelectedMaster = character;
+                        Properties.Settings.Default.Save();
+                        Application.Restart();
+                    } else { MessageBox.Show("Can't select " +character+" as a source as there are linked files present in their directory."); }
+                    
                 }
                 Button button = new Button();
                 button.Text = character;

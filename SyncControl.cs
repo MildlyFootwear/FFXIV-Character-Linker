@@ -19,7 +19,7 @@ namespace FFXIV_Character_Linker
         List<string> characters = CommonFunctions.GenerateCharacters();
         List<string> LinkOps = new List<string>();
         List<string> UnLinkOps = new List<string>();
-        List<string> linkables = new List<string> { "UISAVE.DAT", "HOTBAR.DAT", "KEYBIND.DAT", "ADDON.DAT", "MACRO.DAT", "LOGFLTR.DAT", "COMMON.DAT", "CONTROL0.DAT", "CONTROL1.DAT" };
+        List<string> linkables = Variables.linkables;
 
         public SyncControl()
         {

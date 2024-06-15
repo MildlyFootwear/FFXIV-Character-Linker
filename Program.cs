@@ -16,7 +16,7 @@ namespace FFXIV_Character_Linker
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-
+            
             if (Settings.Default.NeedToDeploy && (new WindowsPrincipal(WindowsIdentity.GetCurrent())).IsInRole(WindowsBuiltInRole.Administrator))
             {
 
