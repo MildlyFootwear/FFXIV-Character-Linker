@@ -39,7 +39,6 @@
             label5 = new Label();
             label6 = new Label();
             resetButton = new Button();
-            folderBrowserDialog1 = new FolderBrowserDialog();
             LinkButton = new Button();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -140,7 +139,6 @@
         private Label label4;
         private Label label5;
         private Label label6;
-        private FolderBrowserDialog folderBrowserDialog1;
         private Button LinkButton;
     }
 }
