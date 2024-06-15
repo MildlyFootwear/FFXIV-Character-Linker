@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            tableLayoutPanel1 = new TableLayoutPanel();
             SuspendLayout();
             // 
             // label1
@@ -43,27 +43,29 @@
             label1.Text = "Select a character to use as the source:";
             label1.Click += label1_Click;
             // 
-            // flowLayoutPanel1
+            // tableLayoutPanel1
             // 
-            flowLayoutPanel1.AutoScroll = true;
-            flowLayoutPanel1.AutoSize = true;
-            flowLayoutPanel1.BorderStyle = BorderStyle.FixedSingle;
-            flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanel1.Location = new Point(48, 34);
-            flowLayoutPanel1.Margin = new Padding(2, 2, 2, 2);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(219, 154);
-            flowLayoutPanel1.TabIndex = 1;
+            tableLayoutPanel1.AutoScroll = true;
+            tableLayoutPanel1.AutoSize = true;
+            tableLayoutPanel1.ColumnCount = 1;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.Location = new Point(33, 38);
+            tableLayoutPanel1.Margin = new Padding(10);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.Size = new Size(250, 96);
+            tableLayoutPanel1.TabIndex = 1;
             // 
             // MasterSelect
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(317, 225);
-            Controls.Add(flowLayoutPanel1);
+            ClientSize = new Size(317, 153);
+            Controls.Add(tableLayoutPanel1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "MasterSelect";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FFXIV Settings Linker";
@@ -75,6 +77,6 @@
         #endregion
 
         private Label label1;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }

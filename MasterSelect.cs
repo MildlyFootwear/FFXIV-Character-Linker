@@ -19,10 +19,9 @@ namespace FFXIV_Character_Linker
             int Width = 0;
             int Height = 0;
             Button dummy = new Button();
-            flowLayoutPanel1.Controls.Add(dummy);
+            tableLayoutPanel1.Controls.Add(dummy, 0, 0);
             foreach (string character in CommonFunctions.GenerateCharacters())
             {
-                
                 dummy.Text = character;
                 dummy.AutoSize = true;
                 if (dummy.Width > Width)
@@ -30,7 +29,8 @@ namespace FFXIV_Character_Linker
                 if (dummy.Height > Height)
                     Height = dummy.Height;
             }
-            flowLayoutPanel1.Controls.Remove(dummy);
+            tableLayoutPanel1.Controls.Remove(dummy);
+            int row = 0;
             foreach (string character in CommonFunctions.GenerateCharacters())
             {
 
@@ -45,7 +45,9 @@ namespace FFXIV_Character_Linker
                 button.Width = Width;
                 button.Height = Height;
                 button.Click += SelectCharacter;
-                flowLayoutPanel1.Controls.Add(button);
+                button.Anchor = AnchorStyles.Top;
+                tableLayoutPanel1.Controls.Add(button, 0, row);
+                row++;
 
             }
         }
