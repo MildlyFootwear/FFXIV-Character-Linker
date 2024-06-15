@@ -16,18 +16,22 @@ namespace FFXIV_Character_Linker
         {
             static void LinkFile(string file1Dir, string file1Name)
             {
-
-                if (File.Exists(file1Dir + file1Name))
+                string SourcePath = Properties.Settings.Default.GameDocumentsDirectory + "\\" + Properties.Settings.Default.SelectedMaster + "\\" + file1Name;
+                if (CommonFunctions.IsLinked(SourcePath) == false)
                 {
-                    if (Directory.Exists(file1Dir + "\\Backup\\") == false)
+                    if (File.Exists(file1Dir + file1Name))
                     {
-                        Directory.CreateDirectory(file1Dir + "\\Backup\\");
+                        if (Directory.Exists(file1Dir + "\\Backup\\") == false)
+                        {
+                            Directory.CreateDirectory(file1Dir + "\\Backup\\");
+                        }
+                        File.Move(file1Dir + file1Name, file1Dir + "\\Backup\\" + file1Name);
                     }
-                    File.Move(file1Dir + file1Name, file1Dir + "\\Backup\\" + file1Name);
-                }
 
-                try { File.CreateSymbolicLink(file1Dir + file1Name, Properties.Settings.Default.GameDocumentsDirectory + "\\" + Properties.Settings.Default.SelectedMaster + "\\" + file1Name); }
-                catch (ArgumentException e) { MessageBox.Show("Exception:" + e.Message); }
+                    try { File.CreateSymbolicLink(file1Dir + file1Name, SourcePath); }
+                    catch (ArgumentException e) { MessageBox.Show("Exception:" + e.Message); }
+                } else { MessageBox.Show("The source character's "+file1Name+" is already a link. Aborting link."); }
+                
 
             }
             static void UnLinkFile(string file1Dir, string file1Name)
